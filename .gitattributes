@@ -1,0 +1,3 @@
+# Vendored/generated libraries: skip in diffs and language statistics
+html5-qrcode.min.js linguist-generated=true -diff
+qrcode.js linguist-generated=true

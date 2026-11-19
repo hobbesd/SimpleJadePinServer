@@ -1,8 +1,25 @@
 services:
   simple_jade_pin_server:
     build: .
+    restart: unless-stopped
     ports:
-      - "18080:4443"
+      - "127.0.0.1:18080:4443"
     volumes:
       - ./key_data:/app/key_data
     command: ["--no-tls"]
+    # Container hardening: the server only ever writes to key_data, needs no
+    # Linux capabilities and never has to gain privileges. key_data must
+    # belong to root (it does when Docker creates it on first start).
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 256
+    mem_limit: 256m
+    # Keep the container log bounded (the event lines of the last days stay available)
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

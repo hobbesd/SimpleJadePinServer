@@ -1,6 +1,7 @@
 MIT License
 
-Copyright (c) 2026 Filiprogrammer
+Copyright (c) 2026 Filiprogrammer (original SimpleJadePinServer)
+Copyright (c) 2026 hobbesd (fork modifications)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +20,27 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+Third-party components:
+
+- qrcode.js — Copyright (c) 2009 Kazuhiko Arase, MIT License
+  (license header preserved in the file)
+- html5-qrcode (html5-qrcode.min.js, v2.3.8) — Copyright 2020 MINHAZ,
+  Apache License 2.0, https://github.com/mebjas/html5-qrcode
+  (bundles zxing-js, also Apache-2.0). Vendored unmodified from cdnjs;
+  sha512 integrity verified against the original SRI hash (see the
+  reference comment in index.html). Full license text in
+  LICENSES/Apache-2.0.txt.
+- Bytewords word list and BC-UR encoding per Blockchain Commons
+  BCR-2020-005/BCR-2020-012 — Copyright Blockchain Commons LLC,
+  BSD-2-Clause-Plus-Patent. Full license text in
+  LICENSES/BSD-2-Clause-Patent.txt.
+
+Images: the files under docs/images/ that depict Blockstream Jade
+hardware/firmware UI and the Blockstream Green app (jade_*.png,
+green_*.png) are taken from the upstream project and include user
+interface elements © Blockstream Corporation Inc., shown for
+interoperability documentation. They are not covered by the MIT
+license above.

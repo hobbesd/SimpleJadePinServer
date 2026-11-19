@@ -1,0 +1,14 @@
+# Nothing here is needed to build the image. Above all, key_data (the static
+# server key and the pin records) must never be handed to the Docker build.
+key_data
+.git
+.gitignore
+.gitattributes
+.dockerignore
+__pycache__
+docs
+README.md
+CHANGELOG.md
+Dockerfile
+docker-compose.yml
+test_*
